@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Audio Substitution",
+  "description": "The simplest Chrome extension using just the activeTab permission. Get data from the active tab and show it to the user.",
+  "version": "0.0.1",
+  "browser_action": {
+    "default_icon": "icon.png", 
+	"default_popup" : "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/watch*"],
+      "js": ["content-scripts.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab", "tabs"
+  ]
+}

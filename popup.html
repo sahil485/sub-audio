@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audio Substitution</title>
+  <script type="text/javascript" src="popup.js"></script>
+</head>
+<body style="padding:0px 10px;text-align:center;width:350px;">
+
+  <h1>Audio Substitution</h1>
+  
+  <p>Select audio file to switch into Youtube.</p>
+  
+  <select id="audioSelect">
+	<option hidden id="s1" value ="s1">Song 1</option>
+	<option hidden id="s2" value ="s2">Song 2</option>
+	<option hidden id="s3" value ="s3">Song 3</option>
+	<option id="yt"  value ="yt" selected="selected">Youtube</option>
+  </select>
+  
+  <button id="confirmChange">Confirm</button>
+  
+  <p id="songChoice"></p>
+  <p id="eventDisplay"></p>
+  
+  <audio id = "s1_" controls hidden>
+	<source src="test.wav" type="audio/wav">
+  </audio>
+  <audio id = "s2_" controls hidden>
+	<source hidden src="test2.mp3" type="audio/mpeg">
+  </audio>
+  <audio id = "s3_" controls hidden>
+	<source hidden src="test3.wav" type="audio/wav">
+  </audio>
+  
+  <div>
+	<p>Enter audio/video speed:</p>
+	<input id = "inputSpeed"/>
+	<button id = "changeSpeed">Change</button>
+  </div>
+  
+</body>
+<!-- <script type="text/javascript" src="popup.js"></script> -->
+</html>
